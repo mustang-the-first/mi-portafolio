@@ -18,51 +18,68 @@ const experience = [
     company: "Ecolab",
     period: "Feb 2025 – Mar 2026",
     bullets: [
-      "Operé SAP SD y AS400: carga de pedidos y pagos de facturas, verificando datos y condiciones de facturación.",
-      "Registré y documenté casos y clientes en SAP y Salesforce, y resolví incidencias de facturación y envíos junto a los equipos de ventas y logística.",
-      "Brindé soporte remoto sobre equipos y atendí más de 80 consultas diarias en inglés y español.",
+      "Resolví errores de SAP SD de otros usuarios (pedidos, entregas, facturación); procesé pagos en AS400.",
+      "Gestioné casos en Salesforce de punta a punta: registro, seguimiento, documentación de la solución y cierre.",
+      "Di soporte remoto sobre equipos (dispensadores, lavavajillas), guiando el diagnóstico de fallas.",
+      "Escalé a ventas y logística lo que excedía mi alcance, con seguimiento hasta resolverlo.",
+      "Atendí más de 80 consultas diarias en inglés y español, por correo, chat y teléfono.",
     ],
   },
   {
     role: "Representante de Atención al Cliente",
-    company: "Banco Santander",
+    company: "Banco Santander (vía CAT Technologies)",
     period: "Feb 2024 – Dic 2024",
     bullets: [
-      "Gestioné más de 1.600 consultas mensuales: verificación de transacciones, alertas de prevención de fraude y consultas de saldo.",
-      "Asistí a clientes con la administración de pólizas de seguro, detalles de cobertura y reclamos.",
+      "Di soporte de primer nivel sobre home banking, app móvil, blanqueo de claves y activación de tokens.",
+      "Guié a usuarios de forma remota, paso a paso, para resolver problemas de acceso y configuración.",
+      "Gestioné más de 1.600 consultas mensuales, incluidas alertas de prevención de fraude, con registro y derivación de cada caso.",
     ],
   },
 ];
 
 const projects = [
   {
-    title: "Fallos de Derecho Privado",
+    title: "Mini-ERP order-to-cash",
     description:
-      "Sitio web con 65 fallos resumidos para estudiar, con buscador y filtros por rama del derecho y por capítulo del manual de la cátedra.",
-    tech: ["React", "JavaScript", "Vercel"],
-    url: "https://fallos-privado.vercel.app",
+      "Sistema de gestión con pedidos, remitos, facturas A/B, cobranzas y asientos contables automáticos por partida doble. Más de 1.200 tests y CI. Diseñé el sistema y dirigí su desarrollo con agentes de IA (Claude Code): definí alcance y reglas contables, revisé cada etapa y lo desplegué en producción.",
+    tech: ["Python", "FastAPI", "PostgreSQL", "Docker"],
+    url: "https://sistema-erp-demo.onrender.com",
+    badge: "Demo",
   },
   {
-    title: "Calculadora Web",
+    title: "Tienda online de autopartes",
+    description: "Catálogo con carrito de compras y envío de correos transaccionales.",
+    tech: ["PostgreSQL (Neon)", "Vercel", "Resend"],
+    url: "https://mi-web-pi-two.vercel.app",
+  },
+  {
+    title: "Calculadora matemática",
     description:
-      "Calculadora con historial de operaciones, validación de inputs y manejo de errores.",
-    tech: ["React", "JavaScript"],
-    url: "https://mi-calculadora-rho.vercel.app/",
+      "Derivadas, integrales, límites, series, matrices y gráficas, con resolución paso a paso.",
+    tech: ["Python", "SymPy", "Vercel"],
+    url: "https://calculadora-definitiva.vercel.app",
+  },
+  {
+    title: "Fallos de Derecho Privado",
+    description:
+      "65 fallos resumidos para estudiar, con buscador y filtros por rama del derecho y capítulo.",
+    tech: ["React", "JavaScript", "Vercel"],
+    url: "https://fallos-privado.vercel.app",
   },
 ];
 
 const skillGroups = [
   {
-    title: "Sistemas y herramientas",
-    items: ["SAP SD", "AS400", "Salesforce", "Zendesk", "Excel avanzado (certificado)", "Word", "Outlook"],
+    title: "Soporte",
+    items: ["Mesa de ayuda N1/N2", "Gestión de tickets (Salesforce, Zendesk)", "Diagnóstico remoto", "Escalamiento", "Documentación de soluciones"],
   },
   {
-    title: "Desarrollo y datos",
-    items: ["SQL", "Python", "JavaScript", "React", "HTML/CSS", "Git", "Linux"],
+    title: "Sistemas",
+    items: ["SAP SD", "AS400", "Microsoft Office", "Excel avanzado (certificado)", "Windows", "Linux"],
   },
   {
-    title: "Funcional",
-    items: ["Facturación", "Carga de pedidos", "Control de documentación", "Prevención de fraude"],
+    title: "Desarrollo",
+    items: ["Python", "SQL (PostgreSQL, MySQL)", "JavaScript", "React", "HTML/CSS", "Git", "Docker"],
   },
   {
     title: "Idiomas",
@@ -73,21 +90,21 @@ const skillGroups = [
 const education = [
   {
     title: "Contador Público",
-    meta: "Universidad de Buenos Aires (UBA), Facultad de Ciencias Económicas · 2026 – presente (1.er año)",
+    meta: "Universidad de Buenos Aires (UBA), Facultad de Ciencias Económicas · 2026 – presente",
   },
   {
     title: "Técnico en Informática",
-    meta: "Instituto Técnico Dr. Emilio Lamarca · 2015 – 2021",
+    meta: "Instituto Técnico Dr. Emilio Lamarca (secundario) · 2015 – 2021",
   },
   {
     title: "MS Excel – Nivel Avanzado",
-    meta: "UTN Facultad Regional Buenos Aires (Extensión Universitaria) · 2019",
+    meta: "UTN Facultad Regional Buenos Aires · 2019",
   },
 ];
 
 const contacts = [
   { label: "Email", value: "canourielalexis@gmail.com", href: "mailto:canourielalexis@gmail.com" },
-  { label: "GitHub", value: "github.com/mustang-the-first", href: "https://github.com/mustang-the-first", external: true },
+  { label: "GitHub", value: "github.com/uacano", href: "https://github.com/uacano", external: true },
   { label: "LinkedIn", value: "linkedin.com/in/uriel-cano-45ab82226", href: "https://www.linkedin.com/in/uriel-cano-45ab82226/", external: true },
 ];
 
@@ -243,11 +260,13 @@ export default function Portfolio() {
         <section className="hero">
           <p className="hero-location">Buenos Aires, Argentina</p>
           <h1>Uriel Cano</h1>
-          <p className="hero-role">Soporte de aplicaciones · SAP SD · Técnico en Informática</p>
+          <p className="hero-role">Mesa de ayuda · Soporte técnico N1/N2 · SAP SD · Técnico en Informática</p>
           <p className="hero-text">
-            Técnico en Informática con más de 2 años en soporte y operaciones administrativas
-            (banca y B2B), trabajando con SAP SD, AS400 y Salesforce. Estudiante de Contador
-            Público en la UBA; además armo proyectos web con React y JavaScript.
+            Técnico en Informática con más de 2 años en soporte a usuarios (banca y B2B):
+            diagnóstico y resolución de incidencias en SAP SD, gestión de casos en Salesforce y
+            asistencia remota por correo, chat y teléfono. Desarrollo proyectos propios en Python,
+            SQL y JavaScript, publicados en la web. Bilingüe español-inglés. Estudiante de
+            Contador Público (UBA).
           </p>
           <div className="hero-actions">
             {CV_URL && (
@@ -300,7 +319,7 @@ export default function Portfolio() {
                   </h3>
                   <span className="project-live">
                     <span className="dot" />
-                    Live
+                    {p.badge ?? "Live"}
                   </span>
                 </div>
                 <p>{p.description}</p>
